@@ -11,7 +11,7 @@ import StockSearch from "../components/dashboard/StockSearch";
 import TransactionHistory from "../components/dashboard/TransactionHistory";
 import "react-toastify/dist/ReactToastify.css";
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const API_BASE_URL = process.env.REACT_APP_API_URL ;
 
 export default function Dashboard() {
   const navigate = useNavigate();
