@@ -1,70 +1,147 @@
-# Getting Started with Create React App
+# 📈 StockSaga Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 🚀 Client-Side for Real-Time Stock Analytics & Portfolio Management
 
-## Available Scripts
+**React • JavaScript/TypeScript • REST API • Responsive Design**
 
-In the project directory, you can run:
+<div align="center">
 
-### `npm start`
+[![React](https://img.shields.io/badge/React-18+-61DAFB?logo=react\&logoColor=white)]()
+[![Vite](https://img.shields.io/badge/Vite-Bundler-purple?logo=vite\&logoColor=white)]()
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)]()
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p align="center">
+  <a href="#-project-overview">Overview</a> •
+  <a href="#-features">Features</a> •
+  <a href="#-demo">Demo</a> •
+  <a href="#-installation--setup">Installation</a> •
+  <a href="#-usage">Usage</a> •
+  <a href="#-project-structure">Structure</a>
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+</div>
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧾 Project Overview
 
-### `npm run build`
+**StockSaga Frontend** is the user interface of the StockSaga application — a web app built to let users monitor stock data, manage their portfolios, build watchlists, and view analytics — all in real time (or near real time).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It interacts with the backend APIs to:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Display stock lists & live prices
+* Show portfolio performance & analytics
+* Manage user watchlists and holdings
+* Provide a smooth, responsive UI for desktop and mobile
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The frontend is built to be **lightweight, responsive**, and **easy to extend**.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🌟 Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* 🎨 **Modern UI** with React components & responsive design
+* 📊 **Portfolio Dashboard:** view holdings, performance charts, net worth
+* ⭐ **Watchlist Management:** add/remove stocks to watchlist
+* 🔄 **Real-time / Periodic Stock Data Fetching** (via API calls)
+* 🔐 **Authentication-aware UI**: login/signup, private portfolio & watchlist
+* 📱 **Responsive & Mobile-friendly** layout
+* ⚙️ **Clean routing & state management** (using React Router / context or state lib)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ⚙️ Installation & Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 1️⃣ Clone the Repository
 
-## Learn More
+```bash
+git clone https://github.com/Maanas52130/stocksaga-frontend.git
+cd stocksaga-frontend
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 2️⃣ Install Dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install
+# or
+yarn install
+```
 
-### Code Splitting
+### 3️⃣ Setup Environment Variables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+If your app uses environment variables (e.g. API endpoint), create a `.env` file:
 
-### Analyzing the Bundle Size
+```
+VITE_API_BASE_URL=https://your-backend-api-url
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 4️⃣ Start the Development Server
 
-### Making a Progressive Web App
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This will run the app locally (typically at `http://localhost:3000` or as configured).
 
-### Advanced Configuration
+### 5️⃣ Build for Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm run build
+# or
+yarn build
+```
 
-### Deployment
+Generated production build will be in the `dist/` folder (or as configured).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 💡 Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Browse to `http://localhost:3000` after running dev server
+* Signup / Login (if using auth)
+* Add stocks to watchlist / portfolio
+* View portfolio analytics & stock data
+
+---
+
+## 📂 Project Structure
+
+```text
+stocksaga-frontend/
+├── public/                 # Static assets, index.html
+├── src/                    # Source code
+│   ├── components/         # React components (UI, charts, layout)
+│   ├── pages/              # Route pages (Home, Portfolio, Login, etc.)
+│   ├── hooks/              # Custom React hooks (data fetch, auth, etc.)
+│   ├── context/            # Context or state management setup
+│   ├── services/           # API service functions (HTTP requests)
+│   ├── styles/             # CSS / SCSS / styled-components
+│   └── App.jsx / main.jsx  # Root application bootstrap & routing
+├── .env.example            # Example environment variables setup
+├── package.json  
+├── README.md  
+└── ...                     # Other config: vite.config.js, etc.
+```
+
+---
+
+## 🔮 Future Enhancements
+
+* 🌐 Dark mode / light mode toggle
+* 📈 More detailed analytics & stock charts (candlestick, history, etc.)
+* 🔔 Notifications for price alerts / watchlist ticks
+* 🧪 Integration tests + end-to-end tests (Cypress / Playwright)
+* 🧑‍💻 Progressive Web App (PWA) support / mobile optimization
+* 🛡 Improved authentication & authorization flows
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+Made with 💙 by Maanas
+
+---
